@@ -1,0 +1,95 @@
+<!--
+    Option One: CrystalsCollector Game (Recommended)
+
+IMAGE #1
+Watch the demo.
+The player will have to guess the answer, just like in Word Guess. This time, though, 
+the player will guess with numbers instead of letters.
+
+Here's how the app works:
+There will be four crystals displayed as buttons on the page.
+The player will be shown a random number at the start of the game.
+When the player clicks on a crystal, it will add a specific amount of points to the 
+player's total score. 
+Your game will hide this amount until the player clicks a crystal.
+When they do click one, update the player's score counter.
+The player wins if their total score matches the random number from the beginning of 
+the game.
+The player loses if their score goes above the random number.
+The game restarts whenever the player wins or loses.
+When the game begins again, the player should see a new random number. Also, all the 
+crystals will have four new hidden values. Of course, the user's score (and score 
+counter) will reset to zero.
+The app should show the number of games the player wins and loses. To that end, do 
+not refresh the page as a means to restart the game.
+
+Option 1 Game design notes
+The random number shown at the start of the game should be between 19 - 120.
+Each crystal should have a random hidden value between 1 - 12.
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>Psychic Game</title>
+  <meta charset="UTF-8"/>
+  <!-- Scaling to viewing devise -->
+  <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+    crossorigin="anonymous">
+  <!-- Link Google Fonts -->
+  <link rel="stylesheet" type="text/css" 
+    href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab|Yellowtail">
+  <!-- Link CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- Link jQuery -->
+  <script type="text/javascript" 
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- Link game script -->
+</head>
+<body>
+  <div class="container">
+    <h1>The Psychic Game</h1>
+    <h3>Guess what letter I'm thinking of...</h3>
+    <br>
+    <div>
+      <!-- Display directions, and results of round -->
+      <p id="directions-text">Press (a-z) to start playing!!!</p>
+      <!-- Display computer choice at end of round -->
+      <p id="computer-choice-text"> </p>
+      <!-- # of times the user has guessed the letter correctly -->
+      <p id="wins-text"></p>
+      <!-- # of times the user has failed to guess the letter correctly 
+        after exhausting all guesses -->
+      <p id="losses-text"></p>
+      <!-- # of guesses left in round -->
+      <p id="guesses-left-text"></p>
+      <!-- Letters that the user typed in round -->
+      <p id="guesses-so-far"></p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!-- Define Footer, Enter Info - Copyright, Link to GitHub -->
+  <footer>
+    <h6>Copyright &copy; 2019 <a id="myname" href="https://github.com/deanmccluskey">
+      Dean McCluskey</a></h6>
+  </footer>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>
+
+<!-- Copywrite 2019 Dean McCluskey -->
