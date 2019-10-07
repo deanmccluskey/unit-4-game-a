@@ -31,7 +31,7 @@ Each crystal should have a random hidden value between 1 - 12.
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-  <title>Psychic Game</title>
+  <title>Crrystal Collector</title>
   <meta charset="UTF-8"/>
   <!-- Scaling to viewing devise -->
   <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
@@ -49,14 +49,49 @@ Each crystal should have a random hidden value between 1 - 12.
   <!-- Link jQuery -->
   <script type="text/javascript" 
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <!-- Link game script -->
 </head>
 <body>
-  <div class="container">
-    <h1>The Psychic Game</h1>
-    <h3>Guess what letter I'm thinking of...</h3>
-    <br>
-    <div>
+    <header>
+        <h1>Crystal Collector!</h1>
+    </header>
+    <div class="container">
+        <!-- Display instructions -->
+        <div class="instructions">
+            <p>At the start of the game, you will be given a random number for you 
+                to match.</p>
+            <p>There are four crystals below with four hidden values. These values
+                change at the beginning of each round. By clicking on a crystal, 
+                you add its value to your total score.</p>
+            <p>You win the round by matching your total score to the random number. 
+                You lose the round if your total score goes over the random number.</p>
+            <p>Player wins and losses are tallyed.</p>
+        </div>
+        <div row>
+            <div col>
+                target
+            </div>
+            <div col>
+                <p>Wins: 0</p>
+                <p>Losses: 0</p>
+            </div>
+        </div>
+        <div row>
+            <div col>Diamond</div>
+            <div col>Emerald</div>
+            <div col>Ruby</div>
+            <div col>Saphire</div>
+        </div>
+        <div row>
+            <div col>
+                <div row>
+                    <p>Your total score is:</p>
+                </div>
+                <div row>
+                    <p>Current total</p>
+                </div>
+            </div>
+        </div>
+   <div>
       <!-- Display directions, and results of round -->
       <p id="directions-text">Press (a-z) to start playing!!!</p>
       <!-- Display computer choice at end of round -->
@@ -88,6 +123,7 @@ Each crystal should have a random hidden value between 1 - 12.
     <h6>Copyright &copy; 2019 <a id="myname" href="https://github.com/deanmccluskey">
       Dean McCluskey</a></h6>
   </footer>
+  <!-- Link game script -->
   <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
