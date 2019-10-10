@@ -1,0 +1,28 @@
+body {
+
+    font-size: '18px';
+    width: '960px';
+    padding: 5px;    
+}
+
+.container {
+    /*margin: 5px;*/
+}
+
+h1 {
+    background-color: peru;
+    color: 'white';
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 40px;
+    padding-right: 10px;
+}
+
+.instructions {
+    background-color: blanchedalmond;
+    color: darkseagreen;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
