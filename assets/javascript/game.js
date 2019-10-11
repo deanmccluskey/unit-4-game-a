@@ -27,3 +27,18 @@ Option 1 Game design notes
 The random number shown at the start of the game should be between 19 - 120.
 Each crystal should have a random hidden value between 1 - 12.
 */
+
+var computerTarget = 0;
+var diamondValue = 0;
+var emeraldValue = 0;
+var rubyValue = 0;
+var saphireValue = 0;
+var playerTotal = 0;
+var wins = 0;
+var losses = 0;
+
+
+
+reset function () {
+
+}

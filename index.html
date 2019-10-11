@@ -45,29 +45,31 @@ Each crystal should have a random hidden value between 1 - 12.
   <!-- Link Google Fonts -->
   <link rel="stylesheet" type="text/css" 
     href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab|Yellowtail">
-  <!-- Link CSS -->
+  <!-- Link local CSS -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <!-- Link jQuery -->
   <script type="text/javascript" 
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
+    
+        <header class="col-sm-4">
             <h1>Crystal Collector!</h1>
         </header>
+        <br>
+
+        <div class="container-fluid">
         <!-- Display instructions -->
-        <div class="instructions">
-            <p>At the start of the game, you will be given a random number for you 
-                to match.</p>
-            <p>There are four crystals below with four hidden values. These values
-                change at the beginning of each round. By clicking on a crystal, 
-                you add its value to your total score.</p>
-            <p>You win the round by matching your total score to the random number. 
-                You lose the round if your total score goes over the random number.</p>
-            <p>Player wins and losses are tallyed.</p>
+        <div class="col-sm-5 instructions">
+            <p>At the start of the game, you will be given a random number for you to match.</p>
+            <p>There are four crystals below with four hidden values. These values change at the beginning of each round. 
+                By clicking on a crystal, you add its value to your total score.</p>
+            <p>You win the round by matching your total score to the random number. You lose the round if your total score 
+                goes over the random number.</p>
+            <p>Player wins and losses are then tallyed.</p>
         </div>
-        <div row>
+        <div class="row">    
+            <div class="col-sm-2" style="background-color:yellow;"></div>
             <div col>
                 target
             </div>
@@ -77,28 +79,18 @@ Each crystal should have a random hidden value between 1 - 12.
             </div>
         </div>
         <div row>
-            <button class="btn btn-default btn-lg left-button">
-                <span class="fa fa-arrow-left"></span>
+            <button class="btn btn-default btn-lg diamond-button" value="0">
+                <img src="assets/images/diamond.jpg" height="100px" alt="Diamond">
             </button>
-            <button class="btn btn-default btn-lg down-button">
-                <span class="fa fa-arrow-down"></span>
+            <button class="btn btn-default btn-lg emerald-button" value="0">
+                <img src="assets/images/emerald.jpg" height="100px" alt="Emerald">
             </button>
-            <button class="btn btn-default btn-lg right-button">
-                <span class="fa fa-arrow-right"></span>
+            <button class="btn btn-default btn-lg ruby-button">
+                <img src="assets/images/ruby.jpg" height="100px" alt="Ruby">
             </button>
-            <button class="btn btn-default btn-lg left-button">
-                <span class="fa fa-arrow-left"></span>
-            </button>
-            <button class="btn btn-default btn-lg down-button">
-                <span class="fa fa-arrow-down"></span>
-            </button>
-            <button class="btn btn-default btn-lg right-button">
-                <span class="fa fa-arrow-right"></span>
-            </button>
-            <div col>Diamond</div>
-            <div col>Emerald</div>
-            <div col>Ruby</div>
-            <div col>Saphire</div>
+            <button class="btn btn-default btn-lg saphire-button">
+                    <img src="assets/images/saphire.jpg" height="100px" alt="Saphire">
+                </button>
         </div>
         <div row>
             <div col>
@@ -143,7 +135,7 @@ Each crystal should have a random hidden value between 1 - 12.
     <h6>Copyright &copy; 2019 <a id="myname" href="https://github.com/deanmccluskey">
       Dean McCluskey</a></h6>
   </footer>
-  <!-- Link game script -->
+  <!-- Link local Jscript -->
   <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
