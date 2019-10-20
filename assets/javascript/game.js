@@ -29,16 +29,73 @@ Each crystal should have a random hidden value between 1 - 12.
 */
 
 var computerTarget = 0;
-var diamondValue = 0;
-var emeraldValue = 0;
-var rubyValue = 0;
-var saphireValue = 0;
+var buttonNames = ["diamond-button", "emerald-button", "ruby-button", "saphire-button"];
+var buttonValues = [0, 0, 0, 0];
 var playerTotal = 0;
 var wins = 0;
 var losses = 0;
 
+// Create variables that hold references to places in HTML to display things
+var targetText = document.getElementById("target-text");
+var statusText = document.getElementById("status-text");
+var winsText = document.getElementById("wins-text");
+var lossesText = document.getElementById("losses-text");
+var scoreText = document.getElementById("losses-text");
 
 
-reset function () {
+/*
+var guessesLeftText = document.getElementById("guesses-left-text");
+var guessesSoFarText = document.getElementById("guesses-so-far");
+<button class="btn btn-default btn-lg diamond-button" value="0">
+<button class="btn btn-default btn-lg emerald-button" value="0">
+<button class="btn btn-default btn-lg ruby-button" value="0">
+<button class="btn btn-default btn-lg saphire-button" value="0">
+*/
+// Load all HMTL before executing
+$(document).ready(function() {
+    
+    // Generate random target number
+    computerTarget = randomNum(19,120);
+console.log(computerTarget);
 
+    // Generate random jewel values
+    for (let i=0; i<buttonNames.length; i++) {
+        buttonValues[i] = randomNum(1,12);
+        $("#" + buttonNames[i]).setValue(buttonValues[i]);
+console.log(buttonNames[i] + " " + buttonValues[i]);
+    }
+
+    function randomNum(min,max) {
+        return Math.floor(Math.random()*(max-min+1)+min);
+    };
+    
+});
+
+
+
+/*    // Function captures user keypress
+    $(".btn").on("click", function() {
+
+        //document. = function (event) {
+
+        // Determine which key was pressed
+        var userGuess = event.key.isNumber();
+    }
+
+});
+
+function randomNum(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
 }
+
+
+function reset() {
+    computerTarget = 0;
+    diamondValue = 0;
+    emeraldValue = 0;
+    rubyValue = 0;
+    saphireValue = 0;
+    playerTotal = 0;
+}
+

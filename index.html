@@ -52,56 +52,66 @@ Each crystal should have a random hidden value between 1 - 12.
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
-    
-        <header class="col-sm-4">
+    <div class="row">
+        <header class="col-sm-6">
             <h1>Crystal Collector!</h1>
         </header>
-        <br>
-
-        <div class="container-fluid">
+    </div>
+    <div class="row">
         <!-- Display instructions -->
-        <div class="col-sm-5 instructions">
-            <p>At the start of the game, you will be given a random number for you to match.</p>
+        <div class="col-sm-6 instructions ">
+            <p>At the start of the game, you will be given a random target number for you to match.</p>
             <p>There are four crystals below with four hidden values. These values change at the beginning of each round. 
                 By clicking on a crystal, you add its value to your total score.</p>
-            <p>You win the round by matching your total score to the random number. You lose the round if your total score 
-                goes over the random number.</p>
-            <p>Player wins and losses are then tallyed.</p>
+            <p>You win the round by matching your total score to the target number. You lose the round if your total score 
+                goes over the target number.</p>
+            <p>Player wins and losses are then tallyed and displayed.</p>
         </div>
-        <div class="row">    
-            <div class="col-sm-2" style="background-color:yellow;"></div>
-            <div col>
-                target
-            </div>
-            <div col>
-                <p>Wins: 0</p>
-                <p>Losses: 0</p>
-            </div>
-        </div>
-        <div row>
-            <button class="btn btn-default btn-lg diamond-button" value="0">
-                <img src="assets/images/diamond.jpg" height="100px" alt="Diamond">
-            </button>
-            <button class="btn btn-default btn-lg emerald-button" value="0">
-                <img src="assets/images/emerald.jpg" height="100px" alt="Emerald">
-            </button>
-            <button class="btn btn-default btn-lg ruby-button">
-                <img src="assets/images/ruby.jpg" height="100px" alt="Ruby">
-            </button>
-            <button class="btn btn-default btn-lg saphire-button">
-                    <img src="assets/images/saphire.jpg" height="100px" alt="Saphire">
-                </button>
-        </div>
-        <div row>
-            <div col>
-                <div row>
-                    <p>Your total score is:</p>
-                </div>
-                <div row>
-                    <p>Current total</p>
-                </div>
-            </div>
     </div>
+    <div class="row" height="40px">    
+        <div class="col-sm-3 target">
+            <p id="target-text">target</p>
+        </div>
+        <div class="col-sm-2 status">
+            <p id="status-text">Status</p>
+            <p id="wins-text">Wins: 0</p>
+            <p id="losses-text">Losses: 0</p>
+        </div>
+    </div>
+    <div class="row">
+        <button class="btn btn-default btn-lg diamond-button" value="0">
+            <img src="assets/images/diamond.jpg" height="100px" alt="Diamond">
+        </button>
+        <button class="btn btn-default btn-lg emerald-button" value="0">
+            <img src="assets/images/emerald.jpg" height="100px" alt="Emerald">
+        </button>
+        <button class="btn btn-default btn-lg ruby-button" value="0">
+            <img src="assets/images/ruby.jpg" height="100px" alt="Ruby">
+        </button>
+        <button class="btn btn-default btn-lg saphire-button" value="0">
+            <img src="assets/images/saphire.jpg" height="100px" alt="Saphire">
+        </button>
+    </div>
+    <div class="row">
+            <div class="col-sm-3 result">
+                <div class="row">
+                    <br>
+                    <br>
+                    <br>
+                    <p>Your current total is:</p>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <p class="score-text">0</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 <!--   <div>
       <!-- Display directions, and results of round
       <p id="directions-text">Press (a-z) to start playing!!!</p>
